@@ -1,7 +1,8 @@
+/* eslint-disable no-undef */
 const express = require("express");
 const { dbConnection } = require("./database/config");
 const app = express();
-const port = 4000;
+require("dotenv").config();
 
 // Base de datos
 
@@ -17,6 +18,6 @@ app.use("/api/user", require("./routes/user"));
 
 // Encendiendo el servidor
 
-app.listen(port, () => {
-  console.log(`Servidor encendido en el puerto ${port}`);
+app.listen(process.env.PORT, () => {
+  console.log(`Servidor encendido en el puerto ${process.env.PORT}`);
 });

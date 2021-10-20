@@ -8,7 +8,11 @@ const TodoSchema = Schema({
   user: {
     type: Schema.Types.ObjectId,
     ref: "User",
-    unique: true,
+    require: true,
+  },
+  vigencia: {
+    type: Boolean,
+    require: true,
   },
 });
 

@@ -1,8 +1,9 @@
+/* eslint-disable no-undef */
 const mongoose = require("mongoose");
 
 const dbConnection = async () => {
   try {
-    await mongoose.connect("mongodb://localhost:27017/todo");
+    await mongoose.connect(process.env.DB_CNN);
 
     console.log("DB Online");
   } catch (error) {
