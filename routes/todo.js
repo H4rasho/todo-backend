@@ -6,12 +6,14 @@
 const { Router } = require("express");
 const router = Router();
 
-const { obtenerTodos, crearTodo } = require("../controllers/todo");
-const { validarJWT } = require("../middlewares/validar-jwt");
-
-router.use(validarJWT);
+const {
+  obtenerTodos,
+  crearTodo,
+  actualizarTodo,
+} = require("../controllers/todo");
 
 router.get("/", obtenerTodos);
 router.post("/", crearTodo);
+router.put("/delete/:id", actualizarTodo);
 
 module.exports = router;

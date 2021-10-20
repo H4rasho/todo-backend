@@ -14,7 +14,6 @@ app.use(express.json());
 // Rutas
 
 app.use("/api/todo", require("./routes/todo"));
-app.use("/api/user", require("./routes/user"));
 
 // Encendiendo el servidor
 

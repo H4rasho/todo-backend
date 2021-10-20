@@ -5,11 +5,6 @@ const TodoSchema = Schema({
     type: String,
     require: true,
   },
-  user: {
-    type: Schema.Types.ObjectId,
-    ref: "User",
-    require: true,
-  },
   vigencia: {
     type: Boolean,
     require: true,
