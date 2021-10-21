@@ -20,3 +20,5 @@ app.use("/api/todo", require("./routes/todo"));
 app.listen(process.env.PORT, () => {
   console.log(`Servidor encendido en el puerto ${process.env.PORT}`);
 });
+
+module.exports = app;
